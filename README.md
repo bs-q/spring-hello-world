@@ -1,14 +1,14 @@
-# **spring-hello-world**
+# Internationalize
 
-## 19-12-2020
+## Configuration
 
-- Tìm hiểu về Spring và Spring Boot
-- Tạo controller và view với Thymeleaf
+- LocaleResolver
+  -- Default Locale - locale.US
 
-## 20-12-2020
+- ResourceBundleMessageSource
 
-- Tìm hiểu tạo api trả về json
+## Usage
 
-## 21-12-2020
-
-- Tìm hiểu cách để handle exception và trả về đúng status code
+- Autowire MessageSource
+- @RequestHeader(value="Accept-Language",required=false) Locale locale
+- messageSource.getMessage("helloWorld.message",null, locale)
